@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Drum Kit</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <script src="js/main.js" async></script>
+</head>
+<body>
+    <div class="keys">
+
+        <div id="left-row">
+            <div data-key="65" class="key">
+                <span class="sound">clap</span>
+                <kbd>A</kbd>
+            </div>
+            <div data-key="83" class="key">
+                <span class="sound">hihat</span>
+                <kbd>S</kbd>
+            </div>
+            <div data-key="68" class="key">
+                <span class="sound">kick</span>
+                <kbd>D</kbd>
+            </div>
+            <div data-key="70" class="key">
+                <span class="sound">openhat</span>
+                <kbd>F</kbd>
+            </div>
+        </div>
+
+        <div id="right-row">
+            <div data-key="74" class="key">
+                <span class="sound">boom</span>
+                <kbd>J</kbd>
+            </div>
+            <div data-key="75" class="key">
+                <span class="sound">ride</span>
+                <kbd>K</kbd>
+            </div>
+            <div data-key="76" class="key">
+                <span class="sound">snare</span>
+                <kbd>L</kbd>
+            </div>
+            <div data-key="59" class="key">
+                <span class="sound">tom</span>
+                <kbd>;</kbd>
+            </div>
+        </div>
+    </div>
+
+    <audio data-key="65" src="audio/clap.wav"></audio>
+    <audio data-key="83" src="audio/hihat.wav"></audio>
+    <audio data-key="68" src="audio/kick.wav"></audio>
+    <audio data-key="70" src="audio/openhat.wav"></audio>
+
+    <audio data-key="74" src="audio/boom.wav"></audio>
+    <audio data-key="75" src="audio/ride.wav"></audio>
+    <audio data-key="76" src="audio/snare.wav"></audio>
+    <audio data-key="59" src="audio/tom.wav"></audio>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+html {
+    font-family: "helvetica neue";
+    text-align: center;
+    background-color: #dcccf7;
+    background-image: url("../img/forest.jpg"); /* Source: https://www.pexels.com/photo/aerial-shot-of-forest-254770/ */
+    background-size: cover;
+}
+
+body {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.clock {
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    margin: 5rem auto;
+    padding: 2rem;
+    border: 1rem solid white;
+    border-radius: 50%;
+    background-color: rgba(219, 206, 255, .75);
+    box-shadow: 0 0 0 1rem rgba(0,0,0,.1),
+    inset 0 0 1rem black,
+    0 0 1rem rgba(0,0,0,.2);
+}
+
+.clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px); /* account for the height of the clock hands */
+}
+
+.hand {
+    position: absolute;
+    top: 50%;
+    height: 6px;
+    transform: rotate(90deg);
+    transform-origin: 100%;
+    border-radius: 6px;
+}
+
+.clock-center {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    margin: auto;
+    transform: translateY(3px);
+    border-radius: 5px;
+    background-color: black;
+}
+
+.hand-transition {
+    transition: all .5s;
+    transition-timing-function: cubic-bezier(.175, .885, .32, 1.275);
+}
+
+.hour-hand {
+    background: rgb(21, 4, 37);
+    width: 40%;
+    margin-left: 10%;
+}
+
+.minute-hand {
+    background: rgb(70, 15, 121);
+    width: 45%;
+    margin-left: 5%;
+}
+
+.second-hand {
+    background: rgb(103, 21, 179);
+    width: 50%;
+}
