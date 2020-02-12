@@ -1,0 +1,111 @@
+:root {
+    --page-1-color: steelblue;
+    --page-2-color: tan;
+    --page-3-color: teal;
+    --page-4-color: slateblue;
+    --animate-speed: 1s;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+/* Page Colors */
+#page-1 { background: linear-gradient(var(--page-1-color), var(--page-2-color)) }
+#page-2 { background: linear-gradient(var(--page-2-color), var(--page-3-color)) }
+#page-3 { background: linear-gradient(var(--page-3-color), var(--page-4-color)) }
+#page-4 { background: linear-gradient(var(--page-4-color), var(--page-1-color)) }
+
+
+/* Page */
+.page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 4rem;
+}
+
+.page h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+    margin: 1rem;
+    text-shadow: 0px 0px 0.5em rgba(0,0,0, 0.3);
+}
+
+.page p {
+    font-size: 1.3rem;
+    text-shadow: 0px 0px 0.3em rgba(0,0,0, 0.2);
+}
+
+
+/* Button */
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #f4f4f4;
+    color: #333;
+    text-decoration: none;
+    border: none;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    transition: all 0.3s ease-in;
+    user-select: none;
+    border-radius: 2px;
+}
+
+.btn:hover,
+.btn-dark {
+    background: #333;
+    color: #fff;
+}
+
+.btn-dark:hover {
+    background: #fff;
+    color: #333;
+}
+
+
+/* Animation */
+#page-1 h1 {
+    transform: translateY(-100vh);
+    animation: heading var(--animate-speed) forwards ease-in;
+}
+
+#page-1 p {
+    transform: translateX(-100vw);
+    animation: paragraph var(--animate-speed) forwards ease-in 1s; 
+}
+
+#page-1 .btn {
+    opacity: 0;
+    animation: button var(--animate-speed) forwards ease-in 2s;
+}
+
+
+/* Keyframes */
+@keyframes heading {
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes paragraph {
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes button {
+    to {
+        opacity: 1;
+    }
+}

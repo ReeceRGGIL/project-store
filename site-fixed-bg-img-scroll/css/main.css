@@ -1,0 +1,83 @@
+body, html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: #666;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.img1, .img2, .img3, .img4 {
+    position: relative;
+    opacity: 0.65;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.img1 {
+    background-image: url("../img/sign.jpg");
+    min-height: 100%;
+}
+
+.img2 {
+    background-image: url("../img/reef.jpg");
+    min-height: 400px;
+}
+
+.img3 {
+    background-image: url("../img/sheep.jpg");
+    min-height: 400px;
+}
+
+.img4 {
+    background-image: url("../img/bush.jpg");
+    min-height: 400px;
+}
+
+.section {
+    text-align: center;
+    padding: 4em 6em;
+}
+
+.section-light {
+    background-color:  #f4f4f4;
+    color: #666;
+}
+
+.section-dark {
+    background-color: #282e34;
+    color: #ddd;
+}
+
+.img-text {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 2.5rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+}
+
+.border {
+    display: inline-block;
+    white-space: nowrap;
+    background-color: #111;
+    color: #fff;
+    padding: 0.8em;
+}
+
+.transparent {
+    background-color: transparent;
+    text-shadow: 0.05em 0.05em 0.1em #000;
+}

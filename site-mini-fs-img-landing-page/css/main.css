@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1rem;
+    color: #F4F5FB;
+    background: #020306;
+    line-height: 1.6;
+}
+
+#showcase {
+    background-image: url('../img/sky.png');
+    height: 100vh;
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1.5rem;
+}
+
+#showcase h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+#showcase p {
+    font-size: 1.3rem;
+}
+
+#showcase .button {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #9FACC6;
+    border: #9FACC6 1px solid;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.3rem;
+    margin-top: 1rem;
+}
+
+#showcase .button:hover {
+    background: #020306;
+    color: #F4F5FB;
+}
+
+#container {
+    height: calc(100vh - 5rem);
+    box-sizing: border-box;
+}
+
+#container section{
+    max-width: 80rem;
+    margin: auto;
+    margin-top: 5rem;
+    border-radius: 0.3rem;
+}
+
+#section-a {
+    padding: 1.25rem;
+    background: #020306;
+    color: #F4F5FB;
+    text-align: center;
+}
+
+#section-b {
+    padding: 1.25rem;
+    color: #020306;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+#section-c {
+    display: flex;
+}
+
+#section-c div {
+    padding: 1.25rem;
+}
+
+#section-c #box1, #section-c #box3 {
+    background: #020306;
+    color: #fff;
+}
+
+#section-c #box2 {
+    background: #f9f9f9;
+    color: #020306;
+    border-radius: 0.3rem;
+}

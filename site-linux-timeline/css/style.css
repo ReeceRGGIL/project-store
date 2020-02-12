@@ -1,0 +1,232 @@
+:root {
+    --primary-color: #d4916a;
+    --secondary-color: #aa6239;
+    --white: #ffc9aa;
+    --max-width: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: normal 1rem/1.5 'Arial', sans-serif;
+    background: var(--primary-color);
+    color: var(--white);
+    overflow-x: hidden; 
+}
+
+#main-header {
+    background: var(--secondary-color);
+    padding: 3rem 0;
+}
+
+#main-header h3 {
+    color: var(--primary-color);
+
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.3rem;
+}
+
+/* Timeline base */
+
+.timeline ul {
+    background: linear-gradient(180deg, rgba(85,31,0,1) 0%, rgba(128,60,21,1) 100%);
+    padding: 50px 0;
+}
+
+.timeline ul li {
+    list-style: none;
+    position: relative;
+    width: 0px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: var(--white);
+    border: 4px solid var(--white);
+}
+
+
+/* Timeline end caps */
+.timeline ul li:first-child {
+    border-radius: 4px 4px 0 0;
+}
+
+.timeline ul li:last-child {
+    border-radius: 0 0 4px 4px;
+}
+
+
+/* Timeline boxes */
+.timeline ul li.left div, 
+.timeline ul li.right div {
+    position: relative;
+    bottom: 0;
+    width: 550px;
+    padding: 1rem;
+    background: var(--secondary-color);
+    transition: all 0.3s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+    border-radius: 4px;
+}
+
+/* Right side */
+.timeline ul li.right div {
+    left: 40px;
+    transform: translate(200px, 0);
+}
+
+/* Left side */
+.timeline ul li.left div {
+    left: -588px;
+    transform: translate(-200px, 0);
+}
+
+/* Timeline dots */
+.timeline ul li.left:after,
+.timeline ul li.right:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    width: 25px;
+    height: 25px;
+    background: inherit;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    transition: background 0.5s ease-in-out;
+}
+
+/* Timeline arrows base */
+.timeline li.left div:before,
+.timeline li.right div:before {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+/* Right side arrow*/
+.timeline ul li.right div:before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent var(--secondary-color) transparent transparent;
+}
+
+/* Left side arrow*/
+.timeline ul li.left div:before {
+    right: -15px;
+    border-width: 8px 0 8px 16px;
+    border-color: transparent transparent transparent var(--secondary-color);
+}
+
+/* Show Boxes */
+.timeline ul li.show div {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+}
+
+.timeline ul li.show:after {
+    background: var(--secondary-color);
+}
+
+
+/* Year Indicator */
+.timeline ul li.year {
+    height: 70px;
+}
+
+.timeline ul li.year div {
+    position: absolute;
+    bottom: 0px;
+    width: 60px;
+    height: 60px;
+    background: inherit;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    color: var(--secondary-color);
+    text-align: center;
+    padding-top: 16px;
+}
+
+/* Chapter Indicator */
+.timeline ul li.chapter {
+    height: 80px;
+}
+
+.timeline ul li.chapter div {
+    position: absolute;
+    bottom: 10px;
+    width: 320px;
+    height: 60px;
+    background: inherit;
+    transform: translateX(-50%);
+    border-radius: 4px;
+    color: var(--secondary-color);
+    text-align: center;
+    padding-top: 16px;
+}
+
+
+@media (max-width: 799px) {
+    .timeline ul li {
+        margin-left: 40px;
+    }
+
+    /* Timeline boxes */
+    .timeline ul li.left div,
+    .timeline ul li.right div {
+        width: calc(100vw - 100px);
+    }
+
+    /* Move left boxes to right */
+    .timeline ul li.left div {
+        left: 40px;
+    }
+
+    /* Move left boxes arrow to right */
+    .timeline ul li.left div:before,
+    .timeline ul li.right div:before {
+        left: -15px;
+        border-width: 8px 16px 8px 0;
+        border-color: transparent var(--secondary-color) transparent transparent;
+    }
+
+    .timeline ul li.chapter div {
+        transform: translateX(0%);
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+
+    /* Timeline boxes */
+    .timeline ul li.left div, 
+    .timeline ul li.right div {
+        width: calc(50vw - 50px);
+    }
+
+    /* Right side */
+    .timeline ul li.right div {
+        left: 40px;
+    }
+
+    /* Left side */
+    .timeline ul li.left div {
+        left: calc(-50vw + 10px);
+    }
+
+}
